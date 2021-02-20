@@ -1,7 +1,11 @@
+import { abilities } from "./abilitiesModel";
+import { attacks } from "./attacks.Model";
 import { imagesModel } from "./images.model";
 import { legalitiesModel } from "./legalitiesModel";
+import { resistancesModel } from "./resistanceModel";
 import { setModel } from "./setModel";
 import { tcgplayerModel } from "./tcgplayerModel";
+import { weaknessesModel } from "./weaknessesModel";
 
 export interface Pokemon {
     
@@ -15,8 +19,8 @@ export interface Pokemon {
     evolvesFrom: string,
     abilities: abilities[],
     attacks: attacks[],
-    weaknesses: weaknesses[],
-    resistances: resistances[],
+    weaknesses: weaknessesModel[],
+    resistances: resistancesModel[],
     retreatCost: string[],
     convertedRetreatCost: number,
     set: setModel,
@@ -29,33 +33,4 @@ export interface Pokemon {
       images: imagesModel,
       tcgplayer: tcgplayerModel
     }
-}
-
-
-export interface abilities {
-
-      name: string,
-      text: string,
-      type: string
-    
-}
-
-export interface attacks {
-    
-        name: string,
-        cost: string[],
-        convertedEnergyCost: number,
-        damage: string,
-        text: string
-      
-}
-
-export interface weaknesses {
-        type: string,
-        value: string
-
-}
-
-export interface resistances {
-
 }

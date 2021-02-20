@@ -1,5 +1,7 @@
+import { imagesModel } from "./images.model";
 import { legalitiesModel } from "./legalitiesModel";
 import { setModel } from "./setModel";
+import { tcgplayerModel } from "./tcgplayerModel";
 
 export interface Pokemon {
     
@@ -24,22 +26,8 @@ export interface Pokemon {
     flavorText: string,
     nationalPokedexNumbers: number[],
       legalities: legalitiesModel,
-      images: {
-        
-      },
-      "tcgplayer": {
-        "url": "https://prices.pokemontcg.io/tcgplayer/xy7-54",
-        "updatedAt": "2021/02/20",
-        "prices": {
-          "holofoil": {
-            "low": 3.0,
-            "mid": 3.0,
-            "high": 3.0,
-            "market": 2.93,
-            "directLow": null
-          }
-        }
-      }
+      images: imagesModel,
+      tcgplayer: tcgplayerModel
     }
 }
 
